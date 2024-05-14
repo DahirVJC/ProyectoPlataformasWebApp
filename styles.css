@@ -1,18 +1,19 @@
 body{
     font-family: "Roboto", sans-serif;
-    color: #30505A;
+    color: #E0F6BA;
     margin:0; 
     padding: 0;
+    background-color: #428489;
 }
 
 button{
-    color: white; 
+    color: #DD9860; 
     border: none; 
     border-radius: 10px;
 }
 
 .btnBright{
-    background-color: #8CB3BC;
+    background-color: #2E6982;
 }
 
 .btnDark{
@@ -20,7 +21,7 @@ button{
 }
 
 .bigButton{
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .btnSubtitle{
@@ -40,7 +41,7 @@ input{
 }
 
 .panelMain{
-    background-color: #30505A;
+    background-color: #A2594C;
 }
 
 .panelRegister{
@@ -68,7 +69,7 @@ input{
 
 .labelTitle{
     font-size: 2em;
-    color: white;
+    color: #E0F6BA;
 }
 
 
