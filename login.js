@@ -1,10 +1,10 @@
 function logUser(callback){
-    uname = $("#nameTxt").val();
+    userName = $("#userNameTxt").val();
     password = $("#passwordTxt").val();
     $("#wrapper").html('');
     $.ajax({
         method: 'GET',
-        url: "http://localhost:4444/user/login?name="+uname+"&password="+password,
+        url: "http://localhost:4444/user/login?name="+userName+"&password="+password,
         dataType: 'JSON',
         contentType: 'application/json',
         success: function (user) {

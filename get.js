@@ -11,7 +11,7 @@ function getUserByName(uname){
         contentType: 'application/json',
         success: function (user) {
             console.log("data", user);
-            drawer(cvStructure(user));
+            drawer(profileStructure(user));
         }
     });
 }

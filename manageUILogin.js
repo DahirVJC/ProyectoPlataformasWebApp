@@ -4,7 +4,7 @@ function activateLogin(user){
     $("#panelRegister").show();
     $("#btnLogout").show();
     $("#wrapper").html('');
-    drawer(cvStructure(user));
+    drawer(profileStructure(user));
 }
 
 function deactivateLogin(){

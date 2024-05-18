@@ -1,49 +1,20 @@
 function registerUser(callback){
-    uname = $("#nameTxt").val();
+    const today = new Date();
+    userName = $("#userNameTxt").val();
+    gamerTag = $("#gamerTagTxt").val();
     password = $("#passwordTxt").val();
     email = $("#emailTxt").val();
-    degree = $("#degreeTxt").val();
-    address = $("#addressTxt").val();
-    phone = $("#phoneTxt").val();
-    languages = $("#languagesTxt").val();
-    workName = $("#workNameTxt").val();
-    workPosition = $("#workPositionTxt").val();
-    workDateIni = $("#workDateIniTxt").val();
-    workDateEnd = $("#workDateEndTxt").val();
-    workDescription = $("#workDescriptionTxt").val();
-    schoolName = $("#schoolNameTxt").val();
-    schoolDegree = $("#schoolDegreeTxt").val();
-    schoolDateIni = $("#schoolDateIniTxt").val();
-    schoolDateEnd = $("#schoolDateEndTxt").val();
-    schoolAverage = $("#schoolAverageTxt").val();
-    skills = $("#skillsTxt").val();
-    achievementName = $("#achievementNameTxt").val();
-    achievementDate = $("#achievementDateTxt").val();
-    achievementDescription = $("#achievementDescriptionTxt").val();
+    profilePictureURL = $("#profilePictureURLTxt").val();
     infoUser = {
-        "id": 0,
-        "name": uname,
-        "password": password,
+        "userId": 0,
+        "userName": userName,
+        "gamerTag": gamerTag,
         "email": email,
-        "degree": degree,
-        "address": address,
-        "phone": phone,
-        "languages": languages,
-        "workName": workName,
-        "workPosition": workPosition,
-        "workDateIni": workDateIni,
-        "workDateEnd": workDateEnd,
-        "workDescription": workDescription,
-        "schoolName": schoolName,
-        "schoolDegree": schoolDegree,
-        "schoolDateIni": schoolDateIni,
-        "schoolDateEnd": schoolDateEnd,
-        "schoolAverage": schoolAverage,
-        "skills": skills,
-        "achievementName": achievementName,
-        "achievementDate": achievementDate,
-        "achievementDescription": achievementDescription
-      }
+        "password": password,
+        "profilePictureURL": profilePictureURL,
+        "creationDate": today.getDate(),
+        "enemiesDefeated": 0
+    }
     
     $.ajax({
         method: 'POST',
