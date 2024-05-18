@@ -30,10 +30,6 @@ $(document).ready(function () {
         deactivateLogin();
         uId = -1
     });
-    $("#btnSearch").click(function () {
-        let search = $("#txtSearch").val();
-        getUserByName(search);
-    });
     $("#btnEdit").click(function(){
         drawer(editForm);
         $("#btnSubmitEdit").click(function () {

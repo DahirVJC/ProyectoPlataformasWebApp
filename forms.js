@@ -12,7 +12,7 @@ const completeForm = (
             "</tr>"+
             "<tr>"+
                 "<td><label for='profilePictureURLTxt'>Profile Picture URL</label></td>"+
-                "<td><input type='text' id='profilePictureURL' required></td>"+
+                "<td><input type='text' id='profilePictureURLTxt' required></td>"+
             "</tr>"+
             "<tr>"+
                 "<td><label for='emailTxt'>Email</label></td>"+

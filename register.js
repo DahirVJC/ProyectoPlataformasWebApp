@@ -1,9 +1,8 @@
 function registerUser(callback){
-    const today = new Date();
     userName = $("#userNameTxt").val();
     gamerTag = $("#gamerTagTxt").val();
-    password = $("#passwordTxt").val();
     email = $("#emailTxt").val();
+    password = $("#passwordTxt").val();
     profilePictureURL = $("#profilePictureURLTxt").val();
     infoUser = {
         "userId": 0,
@@ -12,7 +11,7 @@ function registerUser(callback){
         "email": email,
         "password": password,
         "profilePictureURL": profilePictureURL,
-        "creationDate": today.getDate(),
+        "creationDate": new Date(),
         "enemiesDefeated": 0
     }
     
