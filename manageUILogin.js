@@ -16,6 +16,14 @@ function activateLogin(user){
             }
         });
     });
+    $("#btnDelete").click(function(){
+        if(user.userId != -1){
+            deleteUser(user.userId);
+        }
+        else{
+            console.log("Invalid Id");
+        }
+    });
 }
 
 function deactivateLogin(){
