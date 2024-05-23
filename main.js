@@ -12,6 +12,17 @@ $(document).ready(function () {
                     console.log("Register failed.");
                 }
             });
+            $("#btnEdit").click(function(){
+                drawer(editForm);
+                $("#btnSubmitEdit").click(function () {
+                    if(uId != -1){
+                        editUser(uId);
+                    }
+                    else{
+                        console.log("Invalid Id");
+                    }
+                });
+            });
         });
     });
     $("#btnLogin").click(function () {
@@ -30,17 +41,7 @@ $(document).ready(function () {
         deactivateLogin();
         uId = -1
     });
-    $("#btnEdit").click(function(){
-        drawer(editForm);
-        $("#btnSubmitEdit").click(function () {
-            if(uId != -1){
-                editUser(uId);
-            }
-            else{
-                console.log("Invalid Id");
-            }
-        });
-    });
+    
     $("#btnDelete").click(function(){
         if(uId != -1){
             deleteUser(uId);

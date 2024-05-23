@@ -1,16 +1,28 @@
-function editUser(id){
+function editUser(id) {
     userName = $("#userNameTxt").val();
     gamerTag = $("#gamerTagTxt").val();
-    password = $("#passwordTxt").val();
     email = $("#emailTxt").val();
+    password = $("#passwordTxt").val();
+    profilePictureURL = $("#profilePictureURLTxt").val();
+    user = null;
+    getUser(id, function (userR) {
+        if (userR != null) {
+            user = userR;
+        } else {
+            console.log("Error: fetch data.");
+        }
+    });
     infoUser = {
-        "id": id,
+        "userId": id,
         "userName": userName,
         "gamerTag": gamerTag,
+        "email": email,
         "password": password,
-        "email": email
-      }
-      $.ajax({
+        "profilePictureURL": profilePictureURL,
+        "creationDate": user.creationDate,
+        "enemiesDefeated": user.enemiesDefeated
+    }
+    $.ajax({
         method: 'PUT',
         url: "http://localhost:4444/user/update",
         dataType: 'TEXT',
@@ -20,7 +32,7 @@ function editUser(id){
             $("#wrapper").html('');
             $("#wrapper").append("Your information has changed");
         },
-        error: function(){
+        error: function () {
             $("#wrapper").html('');
             $("#wrapper").append("Something went wrong.");
         }
