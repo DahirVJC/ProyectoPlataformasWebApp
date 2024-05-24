@@ -5,13 +5,18 @@ $(document).ready(function () {
     $("#btnRegister").click(function () {
         drawer(registrationForm);
         $("#btnSubmitReg").click(function () {
-            registerUser(function(id) {
-                if (id !== null) {
-                    uId = id;
-                } else {
-                    console.log("Register failed.");
-                }
-            });
+            if(isValidEmail($("#emailTxt").val())){
+                registerUser(function(id) {
+                    if (id !== null) {
+                        uId = id;
+                    } else {
+                        console.log("Register failed.");
+                    }
+                });
+            }
+            else{
+                alert("Invalid email");
+            }
         });
     });
     $("#btnLogin").click(function () {

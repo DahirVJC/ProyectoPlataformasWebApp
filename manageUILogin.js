@@ -7,14 +7,19 @@ function activateLogin(user){
     drawer(profileStructure(user));
     $("#btnEdit").click(function(){
         drawer(editForm);
-        $("#btnSubmitEdit").click(function () {
-            if(user.userId != -1){
-                editUser(user.userId);
-            }
-            else{
-                console.log("Invalid Id");
-            }
-        });
+        if(isValidEmail($("#emailTxt").val())){
+            $("#btnSubmitEdit").click(function () {
+                if(user.userId != -1){
+                    editUser(user.userId);
+                }
+                else{
+                    console.log("Invalid Id");
+                }
+            });
+        }
+        else{
+            alert("Invalid email");
+        }
     });
     $("#btnDelete").click(function(){
         if(user.userId != -1){
