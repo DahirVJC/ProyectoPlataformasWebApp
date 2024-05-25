@@ -25,11 +25,11 @@ function editUser(id) {
                 data: JSON.stringify(infoUser),
                 success: function () {
                     $("#wrapper").html('');
-                    $("#wrapper").append("Your information has changed");
+                    $("#wrapper").append("<br><br>Your information has changed");
                 },
                 error: function () {
                     $("#wrapper").html('');
-                    $("#wrapper").append("Something went wrong.");
+                    $("#wrapper").append("<br><br>Something went wrong.");
                 }
             });
         } else {

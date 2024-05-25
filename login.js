@@ -14,7 +14,7 @@ function logUser(callback){
         },
         error: function(){
             $("#wrapper").html('');
-            $("#wrapper").append("Wrong password or username.");
+            $("#wrapper").append("<br><br>Wrong password or username.");
         }
     });
     return -1;
@@ -33,7 +33,7 @@ function getUser(id, callback){
         },
         error: function(){
             $("#wrapper").html('');
-            $("#wrapper").append("Error getting user info.");
+            $("#wrapper").append("<br><br>Error getting user info.");
         }
     });
     return -1;

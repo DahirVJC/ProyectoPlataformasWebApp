@@ -22,12 +22,13 @@ function registerUser(callback){
         contentType: 'application/json',
         data: JSON.stringify(infoUser),
         success: function (user) {
+            alert("User registered succesfully")
             activateLogin(user);
             callback(user.id);
         },
         error: function(){
             $("#wrapper").html('');
-            $("#wrapper").append("Something went wrong.");
+            $("#wrapper").append("<br><br>Something went wrong.");
         }
     });
     return -1;

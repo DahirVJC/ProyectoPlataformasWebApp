@@ -44,7 +44,7 @@ const editForm=(
 
 const loginForm = (
     "<br>"+
-    "<div class='labelTitle formTitle'>Welcome Back!"+
+    "<div class='labelTitle formTitle'>Welcome Back!</div>"+
     "<br>"+
     "<br>"+
 
