@@ -6,7 +6,7 @@ This is the web client for the proyect: [PancakePanda94/ProyectoPlataformas](htt
 
 API: [DahirVJC/ProyectoPlataformasApi](https://github.com/DahirVJC/ProyectoPlataformasApi)
 
-Android client: WIP
+Android client: [Denji03/ProyectoFinal_PlataformasHeterogeneas_Android](https://github.com/Denji03/ProyectoFinal_PlataformasHeterogeneas_Android)
 
 # Database information
 
